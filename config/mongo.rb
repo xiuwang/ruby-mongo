@@ -2,7 +2,7 @@
 require 'mongo'
 
 module MongoDB
-  def self.connect_to_database_prod
+  def self.connect_to_database_prod_mongo
     conn = Mongo::Connection.new(ENV['MONGODB_24_CENTOS7_SERVICE_HOST'], ENV['MONGODB_24_CENTOS7_SERVICE_PORT'])
     db = conn.db(ENV['MONGODB_DATABASE'])
     #db = conn.db('<database_name>')

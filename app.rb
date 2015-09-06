@@ -7,7 +7,7 @@ set :port, 8080
 
 def configure_database
   if ENV['RACK_ENV']=="production"
-    while !self.connect_to_database_prod
+    while !self.connect_to_database_prodi_mongo
       sleep 0.1
     end
   end
