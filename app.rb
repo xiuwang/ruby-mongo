@@ -10,22 +10,15 @@ def configure_database
     while !self.connect_to_database_prod
       sleep 0.1
     end
-  else
-    while !self.connect_to_database_test
-      sleep 0.1
-    end
   end
   puts "Connected to database"
   puts "Create database..."
-  %x"rake db:create"
-  puts "Run migrations..."
-  %x"rake db:migrate"
 end
 
 configure do
   puts "Run app..."
 
-  unless ENV["DATABASE_SERVICE_HOST"].nil? && ENV["DATABASE_TEST_SERVICE_HOST"].nil?
+  unless ENV["MONGODB_24_CENTOS7_SERVICE_HOST"].nil? && ENV["MONGODB_24_CENTOS7_PORT_27017_TCP_ADDR"].nil?
     configure_database
   end
 end
