@@ -22,6 +22,7 @@ GEM
     mysql2 (0.3.16)
     mongo (1.8.2)
       bson (~> 1.8.2)
+    puma (2.13.4)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
@@ -43,6 +44,7 @@ PLATFORMS
 
 DEPENDENCIES
   mongo
+  puma
   mysql2
   rake
   sinatra
