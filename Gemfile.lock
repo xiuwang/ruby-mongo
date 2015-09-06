@@ -44,7 +44,6 @@ PLATFORMS
 
 DEPENDENCIES
   mongo
-  puma
   mysql2
   rake
   sinatra
